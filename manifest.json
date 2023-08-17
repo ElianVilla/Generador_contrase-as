@@ -1,0 +1,10 @@
+{
+    "manifest_version": 3,
+    "name": "Generador de Contraseñas",
+    "version": "1.0",
+    "description": "Una extensión para generar contraseñas aleatorias.",
+    "permissions": ["activeTab"],
+    "action": {
+        "default_popup": "index.html"
+    }
+}
