@@ -1,9 +1,11 @@
-/* styles.css */
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
     text-align: center;
-    background-color: #f5f5f5;
+    background-color: #E4DCCF;
     padding: 20px;
+    color: black;
 }
 
 .container {
@@ -15,26 +17,99 @@ h2 {
     margin-bottom: 15px;
 }
 
-label {
-    display: block;
-    margin-bottom: 5px;
+.titulo_longitud{
+    margin-top: 30px;
 }
 
-input[type="number"], input[type="checkbox"] {
-    margin-right: 5px;
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.checkbox-group {
+    text-align: left;
+    margin-top: 40px;
+}
+
+/* Estilos para los checkboxes */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    vertical-align: middle;
+}
+
+.switch::before {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background-color: white;
+    border-radius: 50%;
+    left: 2px;
+    top: 1px;
+    transition: left 0.3s ease-in-out;
+}
+
+input[type="checkbox"]:checked + .switch::before {
+    left: 20px;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+label.titulo_mayusculas,
+label.titulo_minusculas,
+label.titulo_numeros,
+label.titulo_simbolos {
+    position: relative;
+}
+
+label.titulo_mayusculas .switch,
+label.titulo_minusculas .switch,
+label.titulo_numeros .switch,
+label.titulo_simbolos .switch {
+    margin-top: 0;
+}
+
+input[type="checkbox"]:checked + .switch {
+    background-color: #FF6D60;
+}
+
+input[type="checkbox"] + .switch {
+    background-color: #F7D060;
+}
+
+.switch-label {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 40px;
+    height: 20px;
+    z-index: -1;
+    cursor: pointer;
 }
 
 button {
-    background-color: #007bff;
-    color: white;
+    background-color: #FF6D60;
+    color: black;
     border: none;
     padding: 8px 16px;
     cursor: pointer;
-    margin-top: 10px;
+    margin-top: 30px;
+    border-radius: 24px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #F7D060;
 }
 
 #passwordInput {
@@ -42,18 +117,39 @@ button:hover {
     width: 20%;
     padding: 8px;
     font-size: 14px;
+    border-radius: 5px;
 }
 
 #copiar {
-    background-color: #28a745;
-    color: white;
+    background-color: #FF6D60;
+    color: black;
     border: none;
     padding: 8px 16px;
     cursor: pointer;
-    margin-top: 10px;
+    margin-top: 20px;
+    border-radius: 24px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
 }
 
 #copiar:hover {
-    background-color: #218838;
+    background-color: #F7D060;
 }
 
+#length {
+    display: inline-block;
+    width: 20%;
+    height: 25px;
+    vertical-align: middle;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+#passwordInput {
+    display: inline-block;
+    width: 70%;
+    padding: 8px;
+    font-size: 14px;
+    vertical-align: middle;
+    margin-top: 20px;
+}

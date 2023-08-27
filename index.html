@@ -1,22 +1,42 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <link rel="stylesheet" type="text/css" href="styles.css">
-    </head>
-    <body>
-        <p>
-            <h2>Generador de Contraseñas</h2>
-            <label for="length">Longitud de Contraseña: </label>
-            <input type="number" id="length" value="15">
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h2 class="Titulo">Generador de Contraseñas</h2>
+        <label class="titulo_longitud" for="length">Longitud de Contraseña:</label>
+        <input type="number" id="length" value="20">
+        <br>
+        <div class="checkbox-group">
+            <label class="titulo_mayusculas">
+                <input type="checkbox" id="incluirMayusculas" checked>
+                <span class="switch"></span> Incluir mayúsculas
+            </label>
             <br>
-            <p></p><label><input type="checkbox" id="incluirMayusculas" checked>Incluir Mayusculas</label></p>
-            <p></p><label><input type="checkbox" id="incluirMinusculas" checked>Incluir Minusculas</label></p>
-            <p></p><label><input type="checkbox" id="incluirNumeros" checked>Incluir Numeros</label></p>
-            <p></p><label><input type="checkbox" id="incluirSimbolos" checked>Incluir Simbolos</label></p>
+            <label class="titulo_minusculas">
+                <input type="checkbox" id="incluirMinusculas" checked>
+                <span class="switch"></span> Incluir minúsculas
+            </label>
             <br>
-            <button id="generate">Generar Contraseña</button>
-            <input type="text" id="passwordInput" readonly>
-            <p></p><button id="copiar">Copiar Contraseña</button></p>
-            <script src="script.js"></script>
-    </body>
-    </html>
+            <label class="titulo_numeros">
+                <input type="checkbox" id="incluirNumeros" checked>
+                <span class="switch"></span> Incluir números
+            </label>
+            <br>
+            <label class="titulo_simbolos">
+                <input type="checkbox" id="incluirSimbolos" checked>
+                <span class="switch"></span> Incluir símbolos
+            </label>
+        </div>
+        <button id="generate">Generar Contraseña</button>
+        <input type="text" id="passwordInput" readonly>
+        <button id="copiar">Copiar Contraseña</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
