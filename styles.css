@@ -154,6 +154,34 @@ button:hover {
     margin-top: 20px;
 }
 
+/* Media Query para pantallas medianas y similares */
+@media (min-width: 1025px) and (max-width: 1440px) {
+    .container {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    h2 {
+        font-size: 24px;
+    }
+
+    .checkbox-group {
+        align-self: baseline;
+        margin-left: 30%;
+    }
+
+    #length {
+        width: 10%;
+    }
+
+    #passwordInput {
+        width: 30%;
+    }
+}
+
+
 /* Media Query para pantallas medianas */
 @media (min-width: 768px) and (max-width: 1024px) {
     .container {
