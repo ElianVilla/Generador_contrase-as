@@ -181,9 +181,8 @@ button:hover {
     }
 }
 
-
 /* Media Query para pantallas medianas */
-@media (min-width: 768px) and (max-width: 1024px) {
+@media screen and (max-width: 991.98px) {
     .container {
         max-width: 100%;
         display: flex;
